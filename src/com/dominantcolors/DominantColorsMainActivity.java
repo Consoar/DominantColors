@@ -26,6 +26,8 @@ public class DominantColorsMainActivity extends Activity {
 		((Button) findViewById(R.id.live_button)).setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				Intent intent = new Intent(DominantColorsMainActivity.this, DominantColorsLiveActivity.class);
+				int numColors = Integer.valueOf(mNumColors.getText().toString());
+				intent.putExtra("numColors", numColors);
 				startActivity(intent);
 			}
 		});
